@@ -1,0 +1,36 @@
+
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*=======================================================================
+                        playback part start
+========================================================================*/
+#playback{
+    padding: 202px 0;
+    position: relative;
+    z-index: 1;
+    &::after{
+        @include overlay();
+        z-index: -1;
+    }
+    .play_icon{
+        text-align: center;
+        img{
+            width: 70px;
+            height: 70px;
+            cursor: pointer;
+        }
+    }
+    .play_text{
+        
+        h3{
+            @include fs(#fff, 16px, 900, $fpera);
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+}
+/*=======================================================================
+                        playback part end
+========================================================================*/

@@ -1,0 +1,45 @@
+
+@import '../variables/variables';
+@import '../mixins/mixins';
+/*=======================================================================
+                        menu part start
+========================================================================*/
+#menu{
+    padding: 16px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    .menu_row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .main_menu{
+            ul{
+                display: flex;
+                flex-wrap: wrap;              
+                li{
+                    a{
+                        @include fs(#fff, 13px, 900, $fpera);
+                        line-height: 50px;
+                        margin-left: 25px;
+                        text-transform: uppercase;
+                        transition: all linear .3s;
+                        -moz-transition: all linear .3s;
+                        -o-transition: all linear .3s;
+                        -ms-transition: all linear .3s;
+                        -webkit-transition: all linear .3s;
+                        &:hover{
+                            color: $hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*=======================================================================
+                        menu part end
+========================================================================*/

@@ -1,0 +1,86 @@
+
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*=======================================================================
+                        team part start
+========================================================================*/
+#team{
+    padding: 70px 0 46px;
+    position: relative;
+    z-index: 1;
+    &::after{
+        @include overlay();
+        z-index: -1;
+    }
+   .container{
+      .team_head{
+        position: relative;
+        &::after{
+            @include after_lt(459px, 64px, 52px, 1px, #655c80);
+        }
+        h2{
+            text-align: center;
+            @include fs(#fff, 22px, 800, $fhead);
+            text-transform: uppercase;
+        }
+        p{
+            text-align: center;
+            @include fs(#f9f9f9, 14px, 300, $fhead);
+            margin: 3px 0 30px;
+        }
+       }
+     .team_row{
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         margin-top: 52px;
+         margin-bottom: 52px;
+         .team_col{
+             width: 23%;
+             .team_img{
+                 img{
+                     width: 100%;
+                     max-width: 100%;
+                 }
+             }
+             .team_txt{
+                 text-align: center;
+                 padding: 16px 0 20px;
+                 border-left: 1px solid #7b788f;
+                 border-right: 1px solid #7b788f;
+                 border-bottom: 1px solid #7b788f;
+                 h3{
+                     @include fs(#fff, 14px, 900, $fpera);
+                     text-transform: uppercase;
+                     margin-bottom: 6px;
+                 }
+                 p{
+                     @include fs(#fafafa, 13px, 300, $fpera);
+                     text-transform: uppercase;
+                 }
+             }
+         }
+     }
+     .btn{
+        text-align: center;
+         p{
+             @include fs(#f3f3f3, 14px, 300, $fpera);
+             margin-bottom: 20px;
+         }
+         a{
+             @include fs($hover, 16px, 400, $fbtn);
+             @include btn();
+             transition: all linear .4s;
+             &:hover{
+                color: #fff;
+                background: $hover;
+                border-color: $hover;
+             }
+         }
+     }
+    }
+}
+/*=======================================================================
+                        team part end
+========================================================================*/

@@ -1,0 +1,78 @@
+
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*=======================================================================
+                        form part start
+========================================================================*/
+#form{
+    padding: 72px 0;
+    .form_row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .form{
+            width: 470px;
+            form{
+                h2{
+                    @include fs($head, 22px, 800, $fhead);
+                    text-transform: uppercase;
+                    margin-bottom: 24px;
+                }
+                input{
+                    @include fs($head, 14px, 300, $fpera);
+                    width: 100%;
+                    height: 44px;
+                    border: 1px solid #e5e5e5;
+                    margin-bottom: 20px;
+                    padding-left: 12px;
+                }
+                textarea{
+                    @include fs($head, 14px, 300, $fpera);
+                    width: 100%;
+                    height: 175px;
+                    border: 1px solid #e5e5e5;
+                    padding: 12px;
+                    resize: none;
+                }
+                a{
+                    @include btn();
+                    @include fs($hover, 14px, 400, $fbtn);
+                    margin-top: 15px;
+                    padding: 8px 25px;
+                    transition: all linear .4s;
+                    &:hover{
+                        color: #fff;
+                        background: $hover;
+                        border-color: $hover;
+                    }
+                }
+                
+              
+            }
+            
+        }
+
+        .form_logo{
+            width: 390px;
+            h2{
+                @include fs($head, 22px, 800, $fhead);
+                text-transform: uppercase;
+            }
+            .client_logo{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                ul{
+                    li{
+                        margin-top: 42px;
+                    }
+                }
+            }
+        }
+    }
+}
+/*=======================================================================
+                        form part end
+========================================================================*/

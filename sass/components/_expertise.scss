@@ -1,0 +1,61 @@
+
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*=======================================================================
+                        expertise part start
+========================================================================*/
+#expert{
+    padding: 70px 0 46px;
+    .container{
+        .exp_head{
+            position: relative;
+            &::after{
+                @include after_lt(459px, 64px, 52px, 1px, #c6c4c9);
+            }
+            h2{
+                @include fs($head, 22px, 800, $fhead);
+                text-transform: uppercase;
+                text-align: center;
+            }
+            p{
+                @include fs(#2f2d35, 14px, 400, $fhead);
+                text-align: center;
+                margin-top: 3px;
+                margin-bottom: 44px;
+            }
+        }
+        .exp_row{
+            margin-bottom: -5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+            .exp_col{
+                width: 32%;
+                text-align: center;
+                padding: 35px;
+                cursor: pointer;
+                transition: all linear .4s;
+                &:hover{
+                    background: #E0E6EC;
+                }
+                img{
+                    margin-bottom: 24px;
+                }
+                h3{
+                    @include fs(#413d4b, 14px, 900, $fpera);
+                    text-transform: uppercase;
+                }
+                p{
+                    @include fs(#333, 14px, 300, $fpera);
+                    margin-top: 12px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+/*=======================================================================
+                        expertise part end
+========================================================================*/

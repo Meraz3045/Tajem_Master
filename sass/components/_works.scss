@@ -1,0 +1,91 @@
+
+@import '../variables/variables';
+@import '../mixins/mixins';
+
+/*=======================================================================
+                        works part start
+========================================================================*/
+#works{
+    padding: 50px 0;
+    text-align: center;
+    .works_head{
+        text-align: center;
+        position: relative;
+            &::after{
+                @include after_lt(741px, 64px, 50px, 1px, #c6c4c9);
+            }
+        h2{
+            @include fs($head, 22px, 800, $fhead);
+            text-transform: uppercase;
+        }
+        p{
+            @include fs($head, 14px, 400, $fhead);
+            margin-top: 3px;
+        }
+    }
+
+    .works_menu{
+        margin-top: 40px;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            li{
+                margin: 0 5px;
+                a{
+                    @include fs($head, 14px, 400, $fbtn);
+                    padding: 10px;                  
+                    margin-bottom: 50px;
+                    border: 1px solid #c6c4c9;
+                    border-radius: 2px;
+                    transition: all linear .4s;
+                    &:hover{
+                        background: $hover;
+                        color: #fff;
+                        border-color: $hover;
+                    }
+                }
+            }
+        }
+    }
+
+    .works_img_row{
+        display: flex;
+        flex-wrap: wrap;
+        .img1{
+            width: 16.6%;
+            img{
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
+    .works_img_row2{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 55px;
+        .img1{
+            width: 16.6%;
+            img{
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
+    a{
+        @include btn();
+        @include fs($hover, 16px, 400, $fbtn);
+        transition: all linear .4s;
+        &:hover{
+            color: #fff;
+            border-color: $hover;
+            background: $hover;
+        }
+    }
+
+}
+/*=======================================================================
+                        works part end
+========================================================================*/
